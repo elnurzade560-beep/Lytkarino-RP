@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LYTKARINO RP — Официальный сайт</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0d0f12;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            background: rgba(18, 22, 28, 0.9);
+            border-bottom: 1px solid #1f2630;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+        .logo-white { color: #ffffff; }
+        .logo-green { color: #2ecc71; }
+
+        nav a {
+            color: #a0a8b5;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav a:hover { color: #2ecc71; }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle, rgba(46,204,113,0.1) 0%, rgba(13,15,18,1) 70%);
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            color: #8a94a6;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .btn {
+            background: #2ecc71;
+            color: #0d0f12;
+            padding: 14px 32px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+        .btn:hover {
+            background: #27ae60;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            border-left: 4px solid #2ecc71;
+            padding-left: 15px;
+        }
+
+        /* Сервер */
+        .servers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        .server-card {
+            background: #14181f;
+            border: 1px solid #1f2630;
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .server-info h3 { font-size: 20px; margin-bottom: 5px; }
+        .server-online {
+            background: rgba(46, 204, 113, 0.1);
+            color: #2ecc71;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Новости */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .news-card {
+            background: #14181f;
+            border: 1px solid #1f2630;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .news-date {
+            color: #2ecc71;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .news-card h4 { margin-bottom: 10px; font-size: 18px; }
+        .news-card p { color: #8a94a6; font-size: 14px; }
+
+        footer {
+            margin-top: 80px;
+            background: #090a0c;
+            border-top: 1px solid #1f2630;
+            padding: 40px 20px;
+            text-align: center;
+            color: #5f6a7a;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="logo-white">LYTKARINO</span> <span class="logo-green">RP</span>
+        </div>
+        <nav>
+            <a href="#">Главная</a>
+            <a href="#servers">Сервера</a>
+            <a href="#news">Новости</a>
+            <a href="#">Форум</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Добро пожаловать в <span class="logo-white">LYTKARINO</span> <span class="logo-green">RP</span></h1>
+        <p>Погрузись в реальную атмосферу Криминальной России на мобльном устройстве. Начни свой путь прямо сейчас!</p>
+        <a href="#" class="btn">Начать играть</a>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title" id="servers">Наши сервера</h2>
+        <div class="servers-grid">
+            <div class="server-card">
+                <div class="server-info">
+                    <h3>#1 | Lytkarino</h3>
+                    <p style="color: #5f6a7a; font-size: 13px;">CRMP Mobile</p>
+                </div>
+                <div class="server-online">0 / 1000</div>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="news">Новости проекта</h2>
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-date">СЕГОДНЯ</div>
+                <h4>Официальный запуск сайта!</h4>
+                <p>Мы рады приветствовать вас на новом официальном портале Lytkarino RP. Следите за обновлениями!</p>
+            </div>
+            <div class="news-card">
+                <div class="news-date">АНОНС</div>
+                <h4>Эксклюзивный транспорт и скины</h4>
+                <p>Совсем скоро на сервере появятся уникальные автомобили и эксклюзивные скины для игроков.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 LYTKARINO RP. Все права защищены.</p>
+        <p style="margin-top: 5px; font-size: 12px;">Проект не связан с Mojang или Rockstar Games. Цифровые товары возврату не подлежат.</p>
+    </footer>
+
+</body>
+</html>
+
