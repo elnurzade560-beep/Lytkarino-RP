@@ -244,7 +244,7 @@
                     <h3>#1 | Lytkarino</h3>
                     <p style="color: #5f6a7a;">CRMP Mobile</p>
                 </div>
-                <div class="server-online">0 / 1000</div>
+                <div class="server-online" id="player-count">0 / 1000</div>
             </div>
             <div class="server-card">
     <div class="server-info">
@@ -307,7 +307,38 @@
     <p>© 2026 LYTKARINO RP. Все права защищены.</p>
     <p style="margin-top: 8px; font-size: 13px;">Проект не связан с Mojang или Take-Two Interactive.
         Денежные средства возврату не подлежат.</p>
-</footer>
+    </footer>
+      <script>
+async function getRealOnline() {
+    const ip = "185.207.214.14";
+    const port = 4769;
+    const countElement = document.getElementById('player-count');
+
+    try {
+        const response = await fetch(`https://api.samp-servers.net/v2/server/${ip}:${port}`);
+        const data = await response.json();
+
+        if (data && data.online !== undefined) {
+            countElement.innerText = `${data.online} / ${data.maxplayers}`;
+        } else {
+            countElement.innerText = "0 / 1000";
+        }
+    } catch (err) {
+        try {
+            const res = await fetch(`https://sampserver.net/api/v1/server/${ip}:${port}`);
+            const resData = await res.json();
+            if (resData && resData.players !== undefined) {
+                countElement.innerText = `${resData.players} / ${resData.maxplayers}`;
+            }
+        } catch (e) {
+            console.log("Ошибка загрузки онлайна");
+        }
+    }
+}
+
+getRealOnline();
+setInterval(getRealOnline, 30000);
+</script>
 
 </body>
 </html>
