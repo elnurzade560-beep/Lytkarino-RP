@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lytkarino RP — Играй в GTA CRMP на телефоне</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Lytkarino RP">
+                <span>LYTKARINO <b>RP</b></span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#hero">Главная</a>
+                <a href="#about">О проекте</a>
+                <a href="#servers">Мониторинг</a>
+                <a href="https://lytkarino-rp.forum2x2.ru/" target="_blank">Форум</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#start" class="btn btn-primary">Начать играть</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Мобильный CRMP Проект</span>
+                <h1>Погрузись в атмосферу <span>Лыткарино</span> прямо с телефона!</h1>
+                <p>Уникальная карта, реальные машины, фракции, работа и полная свобода действий. Создай свою историю на Lytkarino RP.</p>
+                
+                <div class="hero-btns">
+                    <a href="https://disk.yandex.ru/d/NQswnrSaQ9795Q" target="_blank" class="btn btn-primary btn-large">Скачать лаунчер</a>
+                    <a href="#servers" class="btn btn-outline btn-large">Наши серверы</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num" id="hero-online">0</span>
+                        <span class="stat-desc">Онлайн прямо сейчас</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">1</span>
+                        <span class="stat-desc">Игровой сервер</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-desc">Работа хостинга</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают <span>нас?</span></h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Высокий FPS</h3>
+                    <p>Оптимизированный сборщик и текстуры позволяют комфортно играть даже на слабых устройствах.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <h3>Реальный автопарк</h3>
+                    <p>Сотни отечественных и зарубежных автомобилей с детальной проработкой и тюнингом.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>Развитая экономика</h3>
+                    <p>Зарабатывай на работах, открывай бизнес, покупай дома и строй свою финансовую империю.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servers" class="servers">
+        <div class="container">
+            <h2 class="section-title">Мониторинг <span>серверов</span></h2>
+            
+            <div class="server-card">
+                <div class="server-info">
+                    <div class="server-header">
+                        <span class="server-status online"></span>
+                        <h3>Lytkarino RP | Сервер #1</h3>
+                    </div>
+                    <p class="server-ip" onclick="copyIP('193.124.118.49:7777')">IP: 193.124.118.49:7777 <span class="copy-hint">(нажми, чтобы скопировать)</span></p>
+                </div>
+
+                <div class="server-online-bar">
+                    <div class="online-text">
+                        <span>Онлайн:</span>
+                        <strong id="server-1-players">0 / 1000</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="server-1-progress" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="start" class="how-to-play">
+        <div class="container">
+            <h2 class="section-title">Как начать <span>играть?</span></h2>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3>Скачай лаунчер</h3>
+                    <p>Загрузи наш официальный клиент или APK-файл для установки игры на Android.</p>
+                    <a href="https://disk.yandex.ru/d/NQswnrSaQ9795Q" target="_blank" class="btn btn-secondary">Скачать APK</a>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3>Установи файлы</h3>
+                    <p>Запусти скачанный файл и следуй инструкциям по автоматической установке кэша.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3>Заходи на сервер</h3>
+                    <p>Введи свой никнейм в лаунчере, нажимай «Играть» и погружайся в мир Lytkarino RP!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 Lytkarino RP. Все права защищены.</p>
+                <p class="footer-sub">Проект не связан с Rockstar Games.</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://vk.com" target="_blank">ВКонтакте</a>
+                <a href="https://t.me" target="_blank">Telegram</a>
+                <a href="https://discord.com" target="_blank">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
