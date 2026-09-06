@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LYTKARINO RP — Технические работы</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #1c1e21;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            background: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Чёрно-жёлтая строительная лента сверху */
+        .ribbon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: repeating-linear-gradient(
+                -45deg,
+                #f1c40f,
+                #f1c40f 15px,
+                #222222 15px,
+                #222222 30px
+            );
+        }
+
+        .icon-box {
+            font-size: 80px;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #eef9f1;
+            color: #2ecc71;
+            border: 1px solid rgba(46, 204, 113, 0.3);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 17px;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            background: #f3f4f6;
+            border-left: 4px solid #2ecc71;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .info-box p {
+            font-size: 15px;
+            color: #374151;
+            margin-bottom: 0;
+        }
+
+        .btn {
+            background: #2ecc71;
+            color: #ffffff;
+            padding: 14px 32px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 10px;
+            font-size: 16px;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .btn:hover {
+            background: #27ae60;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 35px 20px; }
+            h1 { font-size: 26px; }
+            .icon-box { font-size: 65px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="ribbon"></div>
+
+        <div class="icon-box">🚜</div>
+
+        <div class="status-badge">УГРОЗА УСТРАНЕНА</div>
+
+        <h1>ТЕХНИЧЕСКИЕ РАБОТЫ</h1>
+
+        <p>Хакерская атака успешно отражена, система полностью очищена от вредоносного кода. Сейчас мы проводим плановую реконструкцию и подготовку сайта к работе.</p>
+
+        <div class="info-box">
+            <p><strong>Статус:</strong> Восстановление базы данных и настройка оборудования.</p>
+            <p style="margin-top: 5px;"><strong>Все данные игроков в безопасности!</strong></p>
+        </div>
+
+        <a href="https://vk.com/lytkarinorp_mobile" target="_blank" class="btn">Группа ВКонтакте</a>
+
+        <footer>© 2026 LYTKARINO RP — Все права защищены.</footer>
+    </div>
+
+</body>
+</html>
